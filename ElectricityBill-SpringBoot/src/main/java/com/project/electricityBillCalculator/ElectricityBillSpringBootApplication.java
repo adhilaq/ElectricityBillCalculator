@@ -1,13 +1,16 @@
-package com.example.demo;
+package com.project.electricityBillCalculator;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import com.example.demo.pojo.Rate;
-import com.example.demo.repos.RateRepository;
+import com.project.electricityBillCalculator.entity.Rate;
+import com.project.electricityBillCalculator.repos.RateRepository;
+
+//import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 public class ElectricityBillSpringBootApplication //implements CommandLineRunner
@@ -21,12 +24,12 @@ public class ElectricityBillSpringBootApplication //implements CommandLineRunner
 	}
 
 //	@Override
-//	public void run(String... args) throws Exception 
+//  public void run(String... args) throws Exception 
 //	{
 //		rateRepository.save(new Rate("Domestic", 2));
 //		rateRepository.save(new Rate("Commercial", 4));
 //		System.out.println("Data inserted.");
-//		
+		
 //	}
 
 }

@@ -1,8 +1,8 @@
-package com.example.demo.repos;
+package com.project.electricityBillCalculator.repos;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.pojo.Rate;
+import com.project.electricityBillCalculator.entity.Rate;
 
 public interface RateRepository extends CrudRepository<Rate, Long>
 {

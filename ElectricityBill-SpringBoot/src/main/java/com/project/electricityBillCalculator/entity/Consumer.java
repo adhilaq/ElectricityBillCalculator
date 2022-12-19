@@ -1,4 +1,4 @@
-package com.example.demo.pojo;
+package com.project.electricityBillCalculator.entity;
 
 import java.util.List;
 

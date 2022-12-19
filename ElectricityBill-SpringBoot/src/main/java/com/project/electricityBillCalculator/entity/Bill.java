@@ -1,4 +1,4 @@
-package com.example.demo.pojo;
+package com.project.electricityBillCalculator.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
