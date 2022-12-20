@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.Bill;
 import com.example.demo.entity.Consumer;
 import com.example.demo.entity.Rate;
+import com.example.demo.exceptions.NotAuthorizedException;
 import com.example.demo.exceptions.UserNotFoundException;
 import com.example.demo.repos.BillRepository;
 import com.example.demo.repos.ConsumerRepository;
@@ -48,6 +50,13 @@ public class AdminController {
 	public Iterable<Bill> getConsumerBillByYearAndMonth(@RequestParam("year") int year,
 			@RequestParam("month") int month) throws UserNotFoundException {
 		return adminService.getConsumerBillByYearAndMonth(year, month);
+
+	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<String> registration(@RequestParam("email") String email,
+			@RequestParam("password") String password) throws UserNotFoundException, NotAuthorizedException {
+		return adminService.registration(email, password);
 
 	}
 

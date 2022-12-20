@@ -46,8 +46,9 @@ public class ConsumerServiceImpl implements ConsumerService {
 		if (consumer == null)
 			throw new UserNotFoundException("No Admin with email "+email+" is present");
 		else {
-			if (consumer.getPassword().equals(password))
+			if (consumer.getPassword().equals(password)) {
 				return new ResponseEntity<String>("Successfully logged in", HttpStatus.OK);
+			}
 			else 
 				return new ResponseEntity<String>("Username or password is incorrect", HttpStatus.BAD_REQUEST);
 		}
@@ -64,7 +65,5 @@ public class ConsumerServiceImpl implements ConsumerService {
 		}
 
 	}
-
-
 
 }
