@@ -28,16 +28,12 @@ public class ConsumerController {
 
 	@Autowired
 	ConsumerServiceImpl consumerService;
-/*
+
 	@PostMapping("/consumers")
-	public void addConsumer(@RequestParam("consumerName") String consumerName, @RequestParam("city") String city,
-			@RequestParam("area") String area, @RequestParam("planId") long planId,
-			@RequestParam("password") String password, @RequestParam("email") String email) {
-		Optional<Rate> rate = rateRepository.findById(planId);
-		Consumer consumer = new Consumer(consumerName, city, area, rate.get(), password, email);
-		consumerRepository.save(consumer);
+	public void addConsumer(@RequestBody Consumer consumer) {
+		consumerService.addConsumer(consumer);
 	}
-	*/
+
 
 	@PostMapping("/login")
 	public ResponseEntity<String> registration(@RequestParam("email") String email,
