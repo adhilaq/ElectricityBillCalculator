@@ -53,7 +53,7 @@ public class AdminController {
 
 	}
 	
-	@PostMapping("admin/login")
+	@PostMapping("/admin/login")
 	public ResponseEntity<String> registration(@RequestParam("email") String email,
 			@RequestParam("password") String password) throws UserNotFoundException, NotAuthorizedException {
 		return adminService.registration(email, password);

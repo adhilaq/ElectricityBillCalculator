@@ -70,6 +70,7 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public ResponseEntity<String> registration(String email, String password)
 			throws UserNotFoundException, NotAuthorizedException {
+		
 		Consumer consumer = consumerRepository.findByEmail(email);
 		if (consumer == null)
 			throw new UserNotFoundException("No Admin with email " + email + " is present");
