@@ -34,7 +34,7 @@ public class ConsumerController {
 		consumerService.addConsumer(consumer);
 	}
 
-
+//check login details
 	@PostMapping("/login")
 	public ResponseEntity<String> registration(@RequestParam("email") String email,
 			@RequestParam("password") String password) throws UserNotFoundException {
